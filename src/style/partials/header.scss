@@ -1,5 +1,12 @@
 // header's styles
 
+
+.container {
+    @include adaptive("tablet") {
+        width: 100%;
+    }
+}
+
 .header {
     @extend .reset-default-styles;
 }
