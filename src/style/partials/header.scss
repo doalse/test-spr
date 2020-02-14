@@ -31,14 +31,24 @@
     }
 }
 
+.nav-top__col {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-top__item {
+    margin-right: 47px;
+}
+
 .nav-top__link {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
     color: #969696;
-    margin-right: 47px;
-
+  
     &:last-child {
         margin-right: 0;
     }
@@ -132,19 +142,16 @@
     }
 }
 
-.nav-bottom-menu__link {
-    font-size: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #4b4b4b;
+.nav-bottom-menu__ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bottom-menu__item {
     padding: 2px 30px;
     border-right: 1px solid #ddd;
-    text-decoration: none;
-    transition: text-decoration 0.3s;
-
-    &:hover {
-        text-decoration: underline;
-    }
 
     &:first-child {
         padding: 2px 30px 2px 0;
@@ -153,6 +160,19 @@
     &:last-child {
         padding: 2px 0 2px 30px;
         border-right: 0;
+    }
+}
+
+.nav-bottom-menu__link {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4b4b4b;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+
+    &:hover {
+        text-decoration: underline;
     }
 
     @include adaptive("notebook") {
