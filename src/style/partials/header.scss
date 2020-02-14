@@ -1,9 +1,16 @@
 // header's styles
 
-
 .container {
-    @include adaptive("tablet") {
-        width: 100%;
+    width: 100%;
+
+    @include adaptive("notebook") {
+        width: 980px;
+        margin: 0 auto;
+    }
+
+    @include adaptive("desktop") {
+        width: 1192px;
+        margin: 0 auto;
     }
 }
 
@@ -244,6 +251,7 @@
 
 .nav-bottom__btn {
     align-items: center;
+    display: flex;
 
     @include adaptive("desktop") {
         display: none;
