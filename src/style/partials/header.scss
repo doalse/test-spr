@@ -249,6 +249,8 @@
 .nav-bottom__cart-ico {
     font-size: 24px;
     color: #61279e;
+    display: block;
+    text-decoration: none;
 
     @include adaptive("desktop") {
         display: none;
