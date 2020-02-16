@@ -1,0 +1,233 @@
+.underheader-title {
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0 0 8px 0;
+    padding: 8px 0;
+
+    @include adaptive("desktop") {
+        margin: 0 0 58px 0;
+    }
+}
+
+.underheader-title__content {
+    color: #4b4b4b;
+    font-weight: 700;
+    margin: 0;
+}
+
+.underheader-title__content_uppercase {
+    text-transform: uppercase;
+    color: #e1359a;
+    font-size: 16px;
+}
+
+.slider-box__item {
+    position: relative;
+}
+
+.slider-box__img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-box__text-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: 10px 38px 27px 38px;
+
+    @include adaptive("tablet") {
+        padding: 30px 160px;
+    }
+
+    @include adaptive("notebook") {
+        padding: 60px 200px;
+    }
+
+    @include adaptive("desktop") {
+        padding: 60px 200px;
+    }
+}
+
+
+.slider-box__text-wrapper_top-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.slider-box__text-wrapper_top-center {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.slider-box__text-wrapper_top-right {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.slider-box__text-wrapper_center-left {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slider-box__text-wrapper_center-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-box__text-wrapper_center-right {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.slider-box__text-wrapper_bottom-left {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.slider-box__text-wrapper_bottom-center {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.slider-box__text-wrapper_bottom-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.slider-box__under-title {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    display: inline-block;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+
+    @include adaptive("tablet") {
+        font-size: 40px;
+        border-bottom: 6px solid rgba(255, 255, 255, 0.5);
+    }
+
+    @include adaptive("notebook") {
+        font-size: 40px;
+        border-bottom: 6px solid rgba(255, 255, 255, 0.5);
+        margin-bottom: 16px;
+    }
+
+    @include adaptive("desktop") {
+        font-size: 40px;
+        border-bottom: 6px solid rgba(255, 255, 255, 0.5);
+        margin-bottom: 16px;
+    }
+}
+
+.slider-box__title {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+
+    @include adaptive("tablet") {
+        font-size: 50px;
+    }
+
+    @include adaptive("notebook") {
+        font-size: 50px;
+        margin-bottom: 28px;
+    }
+
+    @include adaptive("desktop") {
+        font-size: 50px;
+        margin-bottom: 28px;
+    }
+}
+
+.slider-box__link {
+    display: inline-block;
+    padding: 8px 10px;
+    background-color: #61279e;
+    border: 3px solid #652da1;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+        background-color: lighten(#61279e, 10%);
+        border: 3px solid lighten(#652da1, 10%);
+    }
+
+    &:active {
+        background-color: darken(#61279e, 10%);
+        border: 3px solid darken(#652da1, 10%);
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: calc(50% - 25px);
+    z-index: 2;
+    height: 36px;
+    width: 36px;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+
+    @include adaptive("tablet") {
+        margin: 15px 0;
+    }
+
+    @include adaptive("notebook") {
+        margin: 15px 0;
+    }
+
+    @include adaptive("desktop") {
+        margin: 15px 0;
+    }
+}
+
+.slick-dot__element {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #6e6c6a;
+    z-index: 2;
+    display: block;
+}
+
+.slick-active .slick-dot__element {
+    background: #fff;
+}
+
+.slick-dots li {
+    margin-right: 8px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

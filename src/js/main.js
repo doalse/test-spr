@@ -22,4 +22,18 @@ $(function() {
                 .focus();
         }
     });
+
+    // slider configuration
+
+    $(".js-slider-box").slick({
+        infinite: true,
+        slidesToShow: 1,
+        dots: true,
+        customPaging: function(slider, i) {
+            return `<a class="slick-dot__element"></a>`;
+        }
+    });
+
+    $(".slick-prev").text("〈");
+    $(".slick-next").text("〉");
 });
