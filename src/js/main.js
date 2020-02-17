@@ -31,11 +31,10 @@ $(function() {
         dots: true,
         autoplay: true,
         autoplaySpeed: 2000,
+        prevArrow: `<button type="button" class="slick-prev">〈</button>`,
+        nextArrow: `<button type="button" class="slick-next">〉</button>`,
         customPaging: function(slider, i) {
             return `<a class="slick-dot__element"></a>`;
         }
     });
-
-    $(".slick-prev").text("〈");
-    $(".slick-next").text("〉");
 });
