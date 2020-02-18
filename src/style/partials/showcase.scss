@@ -245,3 +245,109 @@
     width: 100%;
     height: auto;
 }
+
+.showcase__col-items {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.showcase__col-item {
+    width: 50%;
+
+    @include adaptive("tablet") {
+        width: 50%;
+        height: 50%;
+    }
+    
+    @include adaptive("notebook") {
+        width: 50%;
+        height: 50%;
+    }
+    
+    @include adaptive("desktop") {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.showcase__col-image-wrapper {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    @include adaptive("tablet") {
+        padding: 0;
+        height: 70%;
+    }
+    
+    @include adaptive("notebook") {
+        padding: 0;
+    }
+    
+    @include adaptive("desktop") {
+        padding: 0;
+        height: 80%;
+    }
+}
+
+.showcase__col-image {
+    transform: scale(0.8);
+
+    @include adaptive("desktop") {
+        transform: scale(1);
+    }
+}
+
+.showcase__col-title-wrap {
+    height: 30%;
+    text-align: center;
+
+    @include adaptive("tablet") {
+        padding: 0 30px;
+        height: 30%;
+    }
+    
+    @include adaptive("notebook") {
+        padding: 0 30px;
+    }
+    
+    @include adaptive("desktop") {
+        padding: 0 30px;
+        height: 20%;
+    }
+}
+
+.showcase__col-item-title {
+    font-size: 16px;
+    color: #4b4b4b;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+    
+    @include adaptive("desktop") {
+        font-size: 18px;
+    }
+}
+
+.showcase__col-item-price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.showcase__col-item-price_old {
+    text-decoration: line-through;
+}
+
+.showcase__col-item-discount {
+    font-size: 16px;
+    color: #e1359a;
+    font-weight: 700;
+}
