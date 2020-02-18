@@ -1,0 +1,11 @@
+.decorate__title {
+    @extend .showcase__title;
+}
+
+.decorate__title-main {
+    @extend .showcase__title-main;
+}
+
+.decorate__title-secondary {
+    @extend .showcase__title-secondary;
+}
