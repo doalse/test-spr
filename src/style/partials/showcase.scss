@@ -121,13 +121,11 @@
 
     @include adaptive("tablet") {
         padding: 25px 40px 20px 25px;
-        padding: 25px 40px 20px 25px;
         display: flex;
         align-items: center;
     }
 
     @include adaptive("notebook") {
-        padding: 25px 40px 20px 25px;
         padding: 25px 40px 20px 25px;
         display: flex;
         align-items: center;
