@@ -298,4 +298,12 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
+
+    &:hover {
+        background: lighten(#61279e, 10%);
+    }
+
+    &:active {
+        background: lighten(#61279e, 10%);
+    }
 }
