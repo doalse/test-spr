@@ -258,6 +258,7 @@
 
     @include adaptive("tablet") {
         flex-direction: row;
+        padding: 28px 10px;
     }
 
     @include adaptive("notebook") {
