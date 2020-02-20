@@ -109,7 +109,7 @@
 .nav-top__row {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 0 26px;
+    padding: 0 0 0 10px;
 }
 
 // header bottom menu, main menu
@@ -119,22 +119,50 @@
 }
 
 .nav-bottom__row {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 10px;
 
+    @include adaptive("tablet") {
+        display: block;
+    }
+
+    @include adaptive("notebook") {
+        display: block;
+    }
+
     @include adaptive("desktop") {
         padding: 17px 0;
+        display: flex;
     }
 }
 
 .nav-bottom-menu {
-    display: none;
+    position: fixed;
+    right: -9999px;
+    height: 100vh;
+    width: 50%;
+    top: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    transition: all 0.1s;
+    opacity: 0;
 
     @include adaptive("desktop") {
         display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        padding: 0;
+        opacity: 1;
     }
+}
+
+.nav-bottom-menu_show {
+    right: 0;
+    opacity: 1;
 }
 
 .nav-bottom-menu__ul {
@@ -142,27 +170,40 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    flex-direction: column;
+
+    @include adaptive("desktop") {
+        flex-direction: row;
+    }
 }
 
 .nav-bottom-menu__item {
-    padding: 2px 30px;
-    border-right: 1px solid #ddd;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 10px;
 
-    &:first-child {
-        padding: 2px 30px 2px 0;
-    }
+    @include adaptive("desktop") {
+        text-align-last: left;
+        padding: 2px 30px;
+        border-right: 1px solid #ddd;
+        margin-bottom: 0;
 
-    &:last-child {
-        padding: 2px 0 2px 30px;
-        border-right: 0;
+        &:first-child {
+            padding: 2px 30px 2px 0;
+        }
+
+        &:last-child {
+            padding: 2px 0 2px 30px;
+            border-right: 0;
+        }
     }
 }
 
 .nav-bottom-menu__link {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #4b4b4b;
+    color: #fff;
     text-decoration: none;
     transition: text-decoration 0.3s;
 
@@ -170,8 +211,9 @@
         text-decoration: underline;
     }
 
-    @include adaptive("notebook") {
-        font-size: 20px;
+    @include adaptive("desktop") {
+        font-size: 30px;
+        color: #4b4b4b;
     }
 }
 
@@ -186,16 +228,41 @@
 }
 
 .nav-bottom__search {
-    // display: none;
+    display: block;
     position: relative;
+    background: #5d2598;
+    padding: 10px;
 
     @include adaptive("desktop") {
         display: block;
+        padding: 0;
+        background: transparent;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 55px;
+        top: -20px;
+        border: 10px solid transparent;
+        border: 10px solid transparent;
+        border-bottom: 10px solid #61279e;
+
+        @include adaptive("tablet") {
+            display: none;
+        }
+
+        @include adaptive("notebook") {
+            display: none;
+        }
+
+        @include adaptive("desktop") {
+            display: none;
+        }
     }
 }
 
 .nav-bottom__input {
-    width: 229px;
     height: 35px;
     border: 1px solid #cccccc;
     outline: 0;
@@ -203,7 +270,7 @@
     border-radius: 4px;
     padding-left: 10px;
     font-size: 12px;
-    display: none;
+    width: 100%;
 
     &::placeholder {
         color: #969696;
@@ -212,29 +279,57 @@
     }
 
     @include adaptive("desktop") {
-        display: block;
+        width: 229px;
+    }
+}
+
+.nav-bottom__mobile-icons {
+    display: inline-flex;
+    width: 32%;
+    justify-content: flex-end;
+    align-items: center;
+    height: 79px;
+    vertical-align: top;
+
+    @include adaptive("desktop") {
+        display: none;
+    }
+}
+
+.nav-bottom__search-ico {
+    background: url("../img/search-ico.svg") no-repeat;
+    width: 22px;
+    height: 22px;
+    display: block;
+    margin-right: 20px;
+
+    @include adaptive("desktop") {
+        display: none;
+    }
+
+    &:hover {
+        opacity: 0.8;
     }
 }
 
 .js-nav-bottom__submit {
     margin-right: 20px;
-    background: url("../img/search-ico.svg") no-repeat;
-    width: 22px;
-    height: 22px;
     border: 0;
     outline: 0;
     cursor: pointer;
+    width: 27px;
+    height: 27px;
+    background: url("../img/search-btn.svg");
+    margin: 0;
+    position: absolute;
+    right: 14px;
+    top: 14px;
 
     &:hover {
         opacity: 0.8;
     }
 
     @include adaptive("desktop") {
-        width: 27px;
-        height: 27px;
-        background: url("../img/search-btn.svg");
-        margin: 0;
-        position: absolute;
         right: 4px;
         top: 4px;
     }
@@ -260,18 +355,22 @@
 .nav-bottom__logo,
 .nav-bottom__search-cart {
     @include adaptive("mobile") {
-        width: 33.333%;
-        display: flex;
+        width: 32%;
+        display: inline-block;
+        text-align: center;
     }
 
     @include adaptive("tablet") {
-        width: 33.333%;
-        display: flex;
+        width: 32%;
+        display: inline-block;
+        text-align: center;
     }
-}
 
-.nav-bottom__search-cart {
-    display: flex;
+    @include adaptive("notebook") {
+        width: 32%;
+        display: inline-block;
+        text-align: center;
+    }
 }
 
 .js-nav-bottom__btn {
@@ -289,6 +388,19 @@
 }
 
 .nav-bottom__btn-wrapper {
+    position: relative;
+    top: -29px;
+
+    @include adaptive("tablet") {
+        position: relative;
+
+    }
+
+    @include adaptive("notebook") {
+        position: relative;
+
+    }
+
     @include adaptive("desktop") {
         display: none;
     }
@@ -314,7 +426,14 @@
 }
 
 .nav-bottom__search-cart {
-    justify-content: flex-end;
+    display: none;
+    width: 100%;
+
+    @include adaptive("desktop") {
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+    }
 }
 
 .nav-bottom__cart {
@@ -323,108 +442,4 @@
     @include adaptive("desktop") {
         display: block;
     }
-}
-
-// header mobile elements
-
-.mobile-search-bar {
-    width: 100%;
-    padding: 10px;
-    background: #61279e;
-    box-sizing: border-box;
-    display: none;
-    position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-
-    &::after {
-        content: "";
-        position: absolute;
-        right: 55px;
-        top: -20px;
-        border: 10px solid transparent;
-        border: 10px solid transparent;
-        border-bottom: 10px solid #61279e;
-
-        @include adaptive("tablet") {
-            display: none;
-        }
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        right: 55px;
-        top: -22px;
-        border: 10px solid transparent;
-        border: 10px solid transparent;
-        border-bottom: 10px solid #fff;
-        transform: scale(1.1);
-
-        @include adaptive("tablet") {
-            display: none;
-        }
-    }
-}
-
-.mobile-search-bar__input {
-    height: 40px;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    outline: 0;
-    padding: 0 12px;
-
-    &::placeholder {
-        text-transform: uppercase;
-        font-size: 12px;
-        color: #969696;
-        font-weight: 700;
-    }
-}
-
-.mobile-search-bar__btn {
-    position: absolute;
-    right: 14px;
-    top: 14px;
-    border-radius: 4px;
-    background: url("../img/search-btn.svg") center;
-    width: 32px;
-    height: 32px;
-    background-size: cover;
-    outline: 0;
-    box-sizing: border-box;
-    border: 0;
-}
-
-// mobile menu
-
-.nav-mobile-menu {
-    position: fixed;
-    width: 50%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
-    top: 0;
-    right: -9999px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0;
-    transition: all 0.1s;
-
-    @include adaptive("desktop") {
-        display: none;
-    }
-}
-
-.nav-mobile-menu_show {
-    right: 0;
-}
-
-.nav-mobile-menu__link {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    padding-bottom: 10px;
 }
