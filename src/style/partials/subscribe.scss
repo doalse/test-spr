@@ -1,0 +1,168 @@
+.subscribe {
+    padding: 18px 0;
+    background: #f5f5f5;
+
+    @include adaptive("tablet") {
+        padding: 33px 0;
+    }
+    
+    @include adaptive("notebook") {
+        padding: 33px 0;
+    }
+    
+    @include adaptive("desktop") {
+        padding: 33px 0;
+    }
+}
+
+.subscribe__form-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe__form {
+    width: 100%;
+
+    @include adaptive("tablet") {
+        width: 70%;
+    }
+
+    @include adaptive("notebook") {
+        width: 70%;
+    }
+
+    @include adaptive("desktop") {
+        width: 60%;
+    }
+}
+
+.subscribe__form-title {
+    color: #4b4b4b;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include adaptive("tablet") {
+        display: inline-block;
+        font-size: 25px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    @include adaptive("notebook") {
+        display: inline-block;
+        font-size: 25px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    @include adaptive("desktop") {
+        display: inline-block;
+        font-size: 25px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+.subscribe__form-text {
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    color: #4b4b4b;
+    display: none;
+
+    @include adaptive("tablet") {
+        display: block;
+    }
+
+    @include adaptive("notebook") {
+        display: block;
+    }
+
+    @include adaptive("desktop") {
+        display: block;
+    }
+}
+
+.subscribe__torm-row {
+    align-items: center;
+    display: block;
+
+
+    @include adaptive("tablet") {
+        display: flex;
+    }
+
+    @include adaptive("notebook") {
+        display: flex;
+    }
+
+    @include adaptive("desktop") {
+        display: flex;
+    }
+}
+
+.subscribe__form-input {
+    width: 60%;
+    height: 41px;
+    border-radius: 6px;
+    box-shadow: none;
+    outline: 0;
+    border: 1px solid #cccccc;
+    margin-left: 10px;
+    padding-left: 12px;
+
+
+    @include adaptive("tablet") {
+        width: 270px;
+
+    }
+
+    @include adaptive("notebook") {
+        width: 270px;
+
+    }
+
+    @include adaptive("desktop") {
+        width: 270px;
+
+    }
+}
+
+.subscribe__form-submit {
+    height: 41px;
+    padding: 0 10px;
+    margin-left: 8px;
+    border: 0;
+    border-radius: 6px;
+    background: #61279e;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 30%;
+
+    &:hover {
+        background: lighten(#61279e, 10%);
+    }
+
+    &:active {
+        background: darken(#61279e, 10%);
+    }
+
+    @include adaptive("tablet") {
+        width: auto;
+    }
+
+    @include adaptive("notebook") {
+        width: auto;
+    }
+
+    @include adaptive("desktop") {
+        width: auto;
+    }
+}
+
+.subscribe__form-text-more {
+    text-transform: uppercase;
+    color: #61279e;
+}
