@@ -198,7 +198,6 @@
     width: 229px;
     height: 35px;
     border: 1px solid #cccccc;
-    outline: 0;
     box-sizing: border-box;
     border-radius: 4px;
     padding-left: 10px;
@@ -222,7 +221,6 @@
     width: 22px;
     height: 22px;
     border: 0;
-    outline: 0;
     cursor: pointer;
 
     &:hover {
@@ -280,7 +278,6 @@
     width: 80px;
     background: transparent;
     border: 0;
-    outline: 0;
     box-shadow: none;
 
     @include adaptive("desktop") {
@@ -372,7 +369,6 @@
     box-sizing: border-box;
     border: 1px solid #cccccc;
     border-radius: 4px;
-    outline: 0;
     padding: 0 12px;
 
     &::placeholder {
@@ -392,7 +388,6 @@
     width: 32px;
     height: 32px;
     background-size: cover;
-    outline: 0;
     box-sizing: border-box;
     border: 0;
 }
