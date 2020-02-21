@@ -1,0 +1,356 @@
+.showcase {
+    padding: 10px 0 0 0;
+
+    @include adaptive("tablet") {
+        padding: 10px 0 0 0;
+    }
+
+    @include adaptive("notebook") {
+        padding: 55px 0 0 0;
+    }
+
+    @include adaptive("desktop") {
+        padding: 55px 0 0 0;
+    }
+}
+
+.showcase__title {
+    text-align: center;
+    position: relative;
+    background-color: #ededed;
+    padding: 14px 0;
+    margin: 0;
+
+    @include adaptive("tablet") {
+        padding: 14px 0;
+    }
+
+    @include adaptive("notebook") {
+        padding: 34px 0;
+    }
+
+    @include adaptive("desktop") {
+        padding: 34px 0;
+    }
+}
+
+.showcase__title-main {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4b4b4b;
+    text-transform: uppercase;
+    display: block;
+}
+
+.showcase__title-secondary {
+    font-size: 12px;
+    color: #969696;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+
+    &::after {
+        content: "❯";
+        font-size: 11px;
+        position: relative;
+        top: -2px;
+        left: 2px;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include adaptive("tablet") {
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 6px);
+    }
+
+    @include adaptive("notebook") {
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 6px);
+    }
+
+    @include adaptive("desktop") {
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 6px);
+    }
+}
+
+.showcase__row {
+    border: 1px solid #cccccc;
+    
+    @include adaptive("tablet") {
+        display: flex;
+    }
+
+    @include adaptive("notebook") {
+        display: flex;
+    }
+
+    @include adaptive("desktop") {
+        display: flex;
+    }
+}
+
+.showcase__col {
+    position: relative;
+
+    @include adaptive("tablet") {
+        width: 50%;
+    }
+
+    @include adaptive("notebook") {
+        width: 50%;
+    }
+
+    @include adaptive("desktop") {
+        width: 50%;
+    }
+}
+
+.showcase__col-top {
+    padding: 16px 16px 25px 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+
+    @include adaptive("tablet") {
+        padding: 25px 40px 20px 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    @include adaptive("notebook") {
+        padding: 25px 40px 20px 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    @include adaptive("desktop") {
+        padding: 25px 40px 20px 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        border: 30px solid transparent;
+        border-right: 30px solid #fff;
+        display: none;
+        
+        @include adaptive("notebook") {
+            display: block;
+        }
+        
+        @include adaptive("desktop") {
+            display: block;
+        }
+    }
+}
+
+.showcase__col-top-text {
+    margin: 0;
+}
+
+.showcase__col-top-title {
+    color: #4b4b4b;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 0 20px 0;
+
+    @include adaptive("tablet") {
+        font-size: 17px;
+        padding: 0;
+    }
+
+    @include adaptive("notebook") {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    @include adaptive("desktop") {
+        font-size: 27px;
+        padding: 0;
+    }
+}
+
+.showcase__col-top-subtitle {
+    display: none;
+    padding: 0;
+    margin: 0;
+
+    @include adaptive("tablet") {
+        color: #4e4e4e;
+        font-size: 14px;
+        display: block;
+    }
+
+    @include adaptive("notebook") {
+        color: #4e4e4e;
+        font-size: 14px;
+        display: block;
+    }
+
+    @include adaptive("desktop") {
+        color: #4e4e4e;
+        font-size: 15px;
+        display: block;
+    }
+}
+
+.showcase__col-top-btn {
+    padding: 15px;
+    min-width: 140px;
+    background-color: #61279e;
+    border-radius: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    border: 0;
+    box-sizing: none;
+    outline: 0;
+
+    &:hover {
+        background-color: lighten(#61279e, 10%);
+    }
+
+    &:active {
+        background-color: darken(#61279e, 10%);
+    }
+
+    @include adaptive("tablet") {
+        margin-left: 15px;
+    }
+
+    @include adaptive("notebook") {
+        margin-left: 15px;
+    }
+
+    @include adaptive("desktop") {
+        margin-left: 15px;
+    }
+}
+
+.showcase__col-bottom-img {
+    width: 100%;
+    height: auto;
+}
+
+.showcase__col-items {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.showcase__col-item {
+    width: 50%;
+
+    @include adaptive("tablet") {
+        width: 50%;
+        height: 50%;
+    }
+    
+    @include adaptive("notebook") {
+        width: 50%;
+        height: 50%;
+    }
+    
+    @include adaptive("desktop") {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.showcase__col-image-wrapper {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    @include adaptive("tablet") {
+        padding: 0;
+        height: 70%;
+    }
+    
+    @include adaptive("notebook") {
+        padding: 0;
+    }
+    
+    @include adaptive("desktop") {
+        padding: 0;
+        height: 80%;
+    }
+}
+
+.showcase__col-image {
+    transform: scale(0.8);
+
+    @include adaptive("desktop") {
+        transform: scale(1);
+    }
+}
+
+.showcase__col-title-wrap {
+    height: 30%;
+    text-align: center;
+
+    @include adaptive("tablet") {
+        padding: 0 30px;
+        height: 30%;
+    }
+    
+    @include adaptive("notebook") {
+        padding: 0 30px;
+    }
+    
+    @include adaptive("desktop") {
+        padding: 0 30px;
+        height: 20%;
+    }
+}
+
+.showcase__col-item-title {
+    font-size: 16px;
+    color: #4b4b4b;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+    
+    @include adaptive("desktop") {
+        font-size: 18px;
+    }
+}
+
+.showcase__col-item-price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.showcase__col-item-price_old {
+    text-decoration: line-through;
+}
+
+.showcase__col-item-discount {
+    font-size: 16px;
+    color: #e1359a;
+    font-weight: 700;
+}

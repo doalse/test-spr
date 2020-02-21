@@ -1,0 +1,94 @@
+.learn-about {
+    text-align: center;
+    padding: 30px 0;
+    
+    @include adaptive("notebook") {
+        padding: 100px 0;
+    }
+    
+    @include adaptive("desktop") {
+        padding: 100px 0;
+    }
+}
+
+.learn-about__undertitle {
+    font-size: 14px;
+    color: #4b4b4b;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+
+    @include adaptive("notebook") {
+        font-size: 18px;
+    }
+
+    @include adaptive("desktop") {
+        font-size: 18px;
+    }
+}
+
+.learn-about__title {
+    font-size: 20px;
+    color: #61279e;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+
+    @include adaptive("notebook") {
+        font-size: 37px;
+    }
+
+    @include adaptive("desktop") {
+        font-size: 37px;
+    }
+}
+
+.learn-about__btn {
+    padding: 9px 20px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    background-color: #61279e;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: lighten(#61279e, 10%);
+    }
+
+    &:active {
+        background-color: darken(#61279e, 10%);
+    }
+}
+
+.learn-about__btn_mobile {
+    @include adaptive("tablet") {
+        display: none;
+    }
+
+    @include adaptive("notebook") {
+        display: none;
+    }
+
+    @include adaptive("desktop") {
+        display: none;
+    }
+}
+
+.learn-about__btn_desktop {
+    display: none;
+
+    @include adaptive("tablet") {
+        display: inline-block;
+    }
+
+    @include adaptive("notebook") {
+        display: inline-block;
+
+    }
+
+    @include adaptive("desktop") {
+        display: inline-block;
+
+    }
+}

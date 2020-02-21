@@ -265,7 +265,6 @@
 .nav-bottom__input {
     height: 35px;
     border: 1px solid #cccccc;
-    outline: 0;
     box-sizing: border-box;
     border-radius: 4px;
     padding-left: 10px;
@@ -315,7 +314,6 @@
 .js-nav-bottom__submit {
     margin-right: 20px;
     border: 0;
-    outline: 0;
     cursor: pointer;
     width: 27px;
     height: 27px;
@@ -379,7 +377,6 @@
     width: 80px;
     background: transparent;
     border: 0;
-    outline: 0;
     box-shadow: none;
 
     @include adaptive("desktop") {
