@@ -7,7 +7,9 @@ $(function() {
 
     $(".nav-bottom__search-ico").on("click", function() {
         $(".nav-bottom__search-cart").slideToggle("fast");
-        $(".nav-bottom__input").val("").focus();
+        $(".nav-bottom__input")
+            .val("")
+            .focus();
     });
 
     // slider configuration
@@ -23,5 +25,9 @@ $(function() {
         customPaging: function(slider, i) {
             return `<a class="slick-dot__element"></a>`;
         }
+    });
+
+    $(".js-footer__col-title").on("click", function() {
+        $(".footer__col-row").slideToggle("fast");
     });
 });
