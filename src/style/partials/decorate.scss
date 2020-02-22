@@ -1,38 +1,63 @@
 .decorate__title {
-    @extend .showcase__title;
+    text-align: center;
+    position: relative;
+    background-color: #ededed;
+    padding: 14px 0;
+    margin: 0;
+
+    @include adaptive("tablet") {
+        padding: 14px 0;
+    }
+
+    @include adaptive("from_1025") {
+        padding: 34px 0;
+    }
 }
 
 .decorate__title-main {
-    @extend .showcase__title-main;
+    font-size: 20px;
+    font-weight: 700;
+    color: $main-title-color;
+    text-transform: uppercase;
+    display: block;
 }
 
 .decorate__title-secondary {
-    @extend .showcase__title-secondary;
+    font-size: 12px;
+    color: $main-font-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+
+    &::after {
+        content: "❯";
+        font-size: 11px;
+        position: relative;
+        top: -2px;
+        left: 2px;
+    }
 }
 
 .decorate__row {
-    @extend .showcase__row;
     border: 0;
+    
+    @include adaptive("from_768") {
+        display: flex;
+    }
 }
 
 .decorate__col {
-    @extend .showcase__col;
+    position: relative;
+
+    @include adaptive("from_768") {
+        width: 50%;
+    }
 }
 
 .decorate__col_left {
     position: relative;
 
-    @include adaptive("tablet") {
-        width: 45%;
-        margin-right: 15px;
-    }
-
-    @include adaptive("notebook") {
-        width: 45%;
-        margin-right: 15px;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         width: 45%;
         margin-right: 15px;
     }
@@ -43,15 +68,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include adaptive("tablet") {
-        width: 55%;
-    }
-
-    @include adaptive("notebook") {
-        width: 55%;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         width: 55%;
     }
 }
@@ -70,15 +87,7 @@
         margin-bottom: 15px;
     }
 
-    @include adaptive("tablet") {
-        height: 48.8%;
-    }
-
-    @include adaptive("notebook") {
-        height: 48.8%;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         height: 48.8%;
     }
 }
@@ -115,18 +124,10 @@
     margin-left: 20px;
     font-size: 30px;
     font-weight: 700;
-    color: #4b4b4b;
+    color: $main-title-color;
     text-transform: uppercase;
 
-    @include adaptive("tablet") {
-        margin-left: 30px;
-    }
-
-    @include adaptive("notebook") {
-        margin-left: 30px;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         margin-left: 30px;
     }
 }
@@ -136,7 +137,7 @@
     border: 0;
     box-shadow: none;
     padding: 8px 12px;
-    background-color: #61279e;
+    background-color: $main-color;
     color: #fff;
     font-size: 12px;
     font-weight: 700;
@@ -144,22 +145,14 @@
     border-radius: 6px;
 
     &:hover {
-        background-color: lighten(#61279e, 10%);
+        background-color: lighten($main-color, 10%);
     }
 
     &:active {
-        background-color: darken(#61279e, 10%);
+        background-color: darken($main-color, 10%);
     }
 
-    @include adaptive("tablet") {
-        margin-right: 35px;
-    }
-
-    @include adaptive("notebook") {
-        margin-right: 35px;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         margin-right: 35px;
     }
 }
@@ -187,15 +180,7 @@
         height: 101px;
         transform: scale(0.5);
 
-        @include adaptive("tablet") {
-            transform: scale(1);
-        }
-
-        @include adaptive("notebook") {
-            transform: scale(1);
-        }
-
-        @include adaptive("desktop") {
+        @include adaptive("from_768") {
             transform: scale(1);
         }
     }
@@ -215,15 +200,7 @@
     font-weight: 700;
     text-transform: uppercase;
 
-    @include adaptive("tablet") {
-        font-size: 30px;
-    }
-
-    @include adaptive("notebook") {
-        font-size: 30px;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         font-size: 30px;
     }
 }
@@ -261,26 +238,17 @@
         padding: 28px 10px;
     }
 
-    @include adaptive("notebook") {
-        padding: 28px 24px;
-        flex-direction: row;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_1025") {
         padding: 28px 24px;
         flex-direction: row;
     }
 }
 
 .decorate__col-item-title_dark {
-    color: #4b4b4b;
+    color: $main-title-color;
     font-size: 20px;
 
-    @include adaptive("tablet") {
-        font-size: 20px;
-    }
-
-    @include adaptive("notebook") {
+    @include adaptive("from_768") {
         font-size: 20px;
     }
 
@@ -293,7 +261,7 @@
     border: 0;
     padding: 8px 12px;
     box-shadow: none;
-    background: #61279e;
+    background: $main-color;
     border-radius: 6px;
     color: #fff;
     text-transform: uppercase;
@@ -301,10 +269,10 @@
     font-weight: 700;
 
     &:hover {
-        background: lighten(#61279e, 10%);
+        background: lighten($main-color, 10%);
     }
 
     &:active {
-        background: lighten(#61279e, 10%);
+        background: lighten($main-color, 10%);
     }
 }

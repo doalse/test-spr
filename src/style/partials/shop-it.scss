@@ -1,11 +1,7 @@
 .shop-it {
     margin: 10px 0;
 
-    @include adaptive("notebook") {
-        margin: 73px 0;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_1025") {
         margin: 73px 0;
     }
 }
@@ -14,15 +10,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include adaptive("tablet") {
-        flex-wrap: nowrap;
-    }
-
-    @include adaptive("notebook") {
-        flex-wrap: nowrap;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         flex-wrap: nowrap;
     }
 }
@@ -32,17 +20,7 @@
     width: 100%;
     margin-bottom: 10px;
 
-    @include adaptive("tablet") {
-        margin: 0 10px 0 0;
-        width: 33.333%;
-    }
-
-    @include adaptive("notebook") {
-        margin: 0 10px 0 0;
-        width: 33.333%;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         margin: 0 10px 0 0;
         width: 33.333%;
     }
@@ -95,29 +73,14 @@
     border: 1px solid #dadada;
     display: none;
 
-    @include adaptive("tablet") {
-        display: block;
-        height: auto;
-    }
-
-    @include adaptive("notebook") {
-        display: block;
-        height: auto;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         display: block;
         height: auto;
     }
 }
 
 .shop-it__col-img {
-    @include adaptive("tablet") {
-        width: 100%;
-        height: auto;
-    }
-
-    @include adaptive("notebook") {
+    @include adaptive("from_768") {
         width: 100%;
         height: auto;
     }
@@ -129,13 +92,13 @@
 }
 
 .shop-it__col-title_violet {
-    background: #61279e;
+    background: $title-bg1;
 }
 
 .shop-it__col-title_pink {
-    background: #fe82cb;
+    background: $title-bg2;
 }
 
 .shop-it__col-title_red {
-    background: #e1359a;
+    background: $title-bg3;
 }

@@ -5,11 +5,7 @@
         padding: 10px 0 0 0;
     }
 
-    @include adaptive("notebook") {
-        padding: 55px 0 0 0;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_1025") {
         padding: 55px 0 0 0;
     }
 }
@@ -25,11 +21,7 @@
         padding: 14px 0;
     }
 
-    @include adaptive("notebook") {
-        padding: 34px 0;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_1025") {
         padding: 34px 0;
     }
 }
@@ -37,14 +29,14 @@
 .showcase__title-main {
     font-size: 20px;
     font-weight: 700;
-    color: #4b4b4b;
+    color: $main-title-color;
     text-transform: uppercase;
     display: block;
 }
 
 .showcase__title-secondary {
     font-size: 12px;
-    color: #969696;
+    color: $main-font-color;
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
@@ -61,19 +53,7 @@
         text-decoration: underline;
     }
 
-    @include adaptive("tablet") {
-        position: absolute;
-        right: 20px;
-        top: calc(50% - 6px);
-    }
-
-    @include adaptive("notebook") {
-        position: absolute;
-        right: 20px;
-        top: calc(50% - 6px);
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         position: absolute;
         right: 20px;
         top: calc(50% - 6px);
@@ -83,15 +63,7 @@
 .showcase__row {
     border: 1px solid #cccccc;
     
-    @include adaptive("tablet") {
-        display: flex;
-    }
-
-    @include adaptive("notebook") {
-        display: flex;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         display: flex;
     }
 }
@@ -99,15 +71,7 @@
 .showcase__col {
     position: relative;
 
-    @include adaptive("tablet") {
-        width: 50%;
-    }
-
-    @include adaptive("notebook") {
-        width: 50%;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         width: 50%;
     }
 }
@@ -120,19 +84,7 @@
     width: 100%;
     background: rgba(255, 255, 255, 0.5);
 
-    @include adaptive("tablet") {
-        padding: 25px 40px 20px 25px;
-        display: flex;
-        align-items: center;
-    }
-
-    @include adaptive("notebook") {
-        padding: 25px 40px 20px 25px;
-        display: flex;
-        align-items: center;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         padding: 25px 40px 20px 25px;
         display: flex;
         align-items: center;
@@ -146,11 +98,7 @@
         border-right: 30px solid #fff;
         display: none;
         
-        @include adaptive("notebook") {
-            display: block;
-        }
-        
-        @include adaptive("desktop") {
+        @include adaptive("from_1025") {
             display: block;
         }
     }
@@ -161,7 +109,7 @@
 }
 
 .showcase__col-top-title {
-    color: #4b4b4b;
+    color: $main-title-color;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -189,13 +137,7 @@
     padding: 0;
     margin: 0;
 
-    @include adaptive("tablet") {
-        color: #4e4e4e;
-        font-size: 14px;
-        display: block;
-    }
-
-    @include adaptive("notebook") {
+    @include adaptive("from_768") {
         color: #4e4e4e;
         font-size: 14px;
         display: block;
@@ -231,15 +173,7 @@
         background-color: darken(#61279e, 10%);
     }
 
-    @include adaptive("tablet") {
-        margin-left: 15px;
-    }
-
-    @include adaptive("notebook") {
-        margin-left: 15px;
-    }
-
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         margin-left: 15px;
     }
 }
@@ -258,17 +192,7 @@
 .showcase__col-item {
     width: 50%;
 
-    @include adaptive("tablet") {
-        width: 50%;
-        height: 50%;
-    }
-    
-    @include adaptive("notebook") {
-        width: 50%;
-        height: 50%;
-    }
-    
-    @include adaptive("desktop") {
+    @include adaptive("from_768") {
         width: 50%;
         height: 50%;
     }
@@ -325,7 +249,7 @@
 
 .showcase__col-item-title {
     font-size: 16px;
-    color: #4b4b4b;
+    color: $main-title-color;
     margin: 0;
     padding: 0;
     display: block;
@@ -351,6 +275,6 @@
 
 .showcase__col-item-discount {
     font-size: 16px;
-    color: #e1359a;
+    color: $main-danger-color;
     font-weight: 700;
 }

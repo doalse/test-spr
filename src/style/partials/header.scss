@@ -50,7 +50,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
-    color: #969696;
+    color: $main-font-color;
 
     &:hover {
         text-decoration: underline;
@@ -123,11 +123,7 @@
     align-items: center;
     padding: 8px 10px;
 
-    @include adaptive("tablet") {
-        display: block;
-    }
-
-    @include adaptive("notebook") {
+    @include adaptive("from_768") {
         display: block;
     }
 
@@ -213,7 +209,7 @@
 
     @include adaptive("desktop") {
         font-size: 30px;
-        color: #4b4b4b;
+        color: $main-title-color;
     }
 }
 
@@ -230,7 +226,7 @@
 .nav-bottom__search {
     display: block;
     position: relative;
-    background: #5d2598;
+    background: $main-color;
     padding: 10px;
 
     @include adaptive("desktop") {
@@ -246,17 +242,9 @@
         top: -20px;
         border: 10px solid transparent;
         border: 10px solid transparent;
-        border-bottom: 10px solid #61279e;
+        border-bottom: 10px solid $main-color;
 
-        @include adaptive("tablet") {
-            display: none;
-        }
-
-        @include adaptive("notebook") {
-            display: none;
-        }
-
-        @include adaptive("desktop") {
+        @include adaptive("from_768") {
             display: none;
         }
     }
@@ -272,7 +260,7 @@
     width: 100%;
 
     &::placeholder {
-        color: #969696;
+        color: $main-font-color;
         text-transform: uppercase;
         font-weight: 700;
     }
@@ -352,19 +340,7 @@
 .nav-bottom__btn-wrapper,
 .nav-bottom__logo,
 .nav-bottom__search-cart {
-    @include adaptive("mobile") {
-        width: 32%;
-        display: inline-block;
-        text-align: center;
-    }
-
-    @include adaptive("tablet") {
-        width: 32%;
-        display: inline-block;
-        text-align: center;
-    }
-
-    @include adaptive("notebook") {
+    @include adaptive("to_1280") {
         width: 32%;
         display: inline-block;
         text-align: center;
@@ -388,14 +364,8 @@
     position: relative;
     top: -29px;
 
-    @include adaptive("tablet") {
+    @include adaptive("from_768") {
         position: relative;
-
-    }
-
-    @include adaptive("notebook") {
-        position: relative;
-
     }
 
     @include adaptive("desktop") {
@@ -405,7 +375,7 @@
 
 .nav-bottom__btn-ico {
     font-size: 24px;
-    color: #5d2598;
+    color: $main-color;
     font-weight: 700;
     margin-right: 8px;
     position: relative;
@@ -415,7 +385,7 @@
 .nav-bottom__btn-label {
     font-size: 12px;
     font-weight: 700;
-    color: #969696;
+    color: $main-font-color;
 }
 
 .nav-bottom__logo {
