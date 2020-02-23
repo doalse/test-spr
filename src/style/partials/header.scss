@@ -2,7 +2,7 @@
 
 .main-btn {
     display: inline-block;
-    padding: 8px 10px;
+    padding: $main-btn-padding;
     background-color: $main-color;
     border: 3px solid darken($main-color, 1%);
     border-radius: 6px;
@@ -23,7 +23,7 @@
 }
 
 .main-btn_large {
-    padding: 15px;
+    padding: $main-btn-large-padding;
 }
 
 
