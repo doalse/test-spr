@@ -31,22 +31,6 @@
 
 .learn-about__btn {
     padding: 9px 20px;
-    color: #fff;
-    font-size: 12px;
-    text-transform: uppercase;
-    border: 0;
-    outline: 0;
-    box-shadow: none;
-    background-color: $main-color;
-    border-radius: 6px;
-
-    &:hover {
-        background-color: lighten($main-color, 10%);
-    }
-
-    &:active {
-        background-color: darken($main-color, 10%);
-    }
 }
 
 .learn-about__btn_mobile {

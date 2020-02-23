@@ -77,23 +77,8 @@
 
 .subscribe__form-submit {
     height: 41px;
-    padding: 0 10px;
     margin-left: 8px;
-    border: 0;
-    border-radius: 6px;
-    background: $main-color;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
     width: 30%;
-
-    &:hover {
-        background: lighten($main-color, 10%);
-    }
-
-    &:active {
-        background: darken($main-color, 10%);
-    }
 
     @include adaptive("from_768") {
         width: auto;

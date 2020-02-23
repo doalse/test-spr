@@ -151,27 +151,7 @@
 }
 
 .showcase__col-top-btn {
-    padding: 15px;
-    min-width: 140px;
-    background-color: #61279e;
-    border-radius: 6px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    display: inline-block;
-    border: 0;
-    box-sizing: none;
-    outline: 0;
-
-    &:hover {
-        background-color: lighten(#61279e, 10%);
-    }
-
-    &:active {
-        background-color: darken(#61279e, 10%);
-    }
+    min-width: 144px;
 
     @include adaptive("from_768") {
         margin-left: 15px;
