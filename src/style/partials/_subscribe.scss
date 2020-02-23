@@ -2,7 +2,7 @@
     padding: 18px 0;
     background: #f5f5f5;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         padding: 33px 0;
     }
 }
@@ -15,7 +15,7 @@
 .subscribe__form {
     width: 100%;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         width: 70%;
     }
 }
@@ -27,7 +27,7 @@
     text-align: center;
     margin-bottom: 10px;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         display: inline-block;
         font-size: 25px;
         text-align: left;
@@ -45,7 +45,7 @@
     color: $main-title-color;
     display: none;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         display: block;
     }
 }
@@ -55,7 +55,7 @@
     display: block;
 
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         display: flex;
     }
 }
@@ -70,7 +70,7 @@
     padding-left: 12px;
 
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         width: 270px;
     }
 }
@@ -80,7 +80,7 @@
     margin-left: 8px;
     width: 30%;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         width: auto;
     }
 }

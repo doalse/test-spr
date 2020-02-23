@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 16px 10px 0 16px;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         padding: 48px 0;
         flex-direction: row;
     }
@@ -12,7 +12,7 @@
 .footer__col {
     width: 100%;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         width: 25%;
     }
 }
@@ -20,7 +20,7 @@
 .footer__col_large {
     width: 100%;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         width: 50%;
     }
 }
@@ -35,7 +35,7 @@
     font-size: 14px;
     position: relative;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         border-bottom: 0;
         padding: 0;
         font-size: 20px;
@@ -64,7 +64,7 @@
     display: block;
     padding: 16px 0;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         font-size: 20px;
         padding: 0;
     }
@@ -73,7 +73,7 @@
 .footer__col-title_none {
     display: none;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         display: block;
     }
 }
@@ -83,7 +83,7 @@
     flex-direction: column;
     display: none;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         flex-direction: row;
         display: flex;
     }
@@ -195,7 +195,7 @@
 .footer__mobile-none {
     display: none;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         display: inline-block;
     }
 }

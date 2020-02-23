@@ -2,7 +2,7 @@
     text-align: center;
     padding: 30px 0;
     
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         padding: 100px 0;
     }
 }
@@ -13,7 +13,7 @@
     font-weight: 700;
     margin: 0 0 10px 0;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         font-size: 18px;
     }
 }
@@ -24,7 +24,7 @@
     margin: 0 0 10px 0;
     font-weight: 300;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         font-size: 37px;
     }
 }
@@ -34,7 +34,7 @@
 }
 
 .learn-about__btn_mobile {
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         display: none;
     }
 }
@@ -42,7 +42,7 @@
 .learn-about__btn_desktop {
     display: none;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         display: inline-block;
     }
 }

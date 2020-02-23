@@ -15,23 +15,15 @@
         @media only screen and (min-width: 1281px) {@content}
     }
 
-    @else if $media == to_767 {
-        @media only screen and (max-width: 767px) {@content}
-    }
-
-    @else if $media == from_768 {
+    @else if $media == tablet_up {
         @media only screen and (min-width: 768px) {@content}
     }
 
-    @else if $media == from_1025 {
+    @else if $media == laptop_up {
         @media only screen and (min-width: 1025px) {@content}
     }
 
-    @else if $media == from_1281 {
-        @media only screen and (min-width: 1281px) {@content}
-    }
-
-    @else if $media == to_1280 {
+    @else if $media == desktop_down {
         @media only screen and (max-width: 1280px) {@content}
     }
 }

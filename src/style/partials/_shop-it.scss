@@ -1,7 +1,7 @@
 .shop-it {
     margin: 10px 0;
 
-    @include adaptive("from_1025") {
+    @include adaptive("laptop_up") {
         margin: 73px 0;
     }
 }
@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         flex-wrap: nowrap;
     }
 }
@@ -20,7 +20,7 @@
     width: 100%;
     margin-bottom: 10px;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         margin: 0 10px 0 0;
         width: 33.333%;
     }
@@ -73,14 +73,14 @@
     border: 1px solid #dadada;
     display: none;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         display: block;
         height: auto;
     }
 }
 
 .shop-it__col-img {
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         width: 100%;
         height: auto;
     }

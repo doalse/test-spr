@@ -150,7 +150,7 @@
     align-items: center;
     padding: 8px 10px;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         display: block;
     }
 
@@ -271,7 +271,7 @@
         border: 10px solid transparent;
         border-bottom: 10px solid $main-color;
 
-        @include adaptive("from_768") {
+        @include adaptive("tablet_up") {
             display: none;
         }
     }
@@ -367,7 +367,7 @@
 .nav-bottom__btn-wrapper,
 .nav-bottom__logo,
 .nav-bottom__search-cart {
-    @include adaptive("to_1280") {
+    @include adaptive("desktop_down") {
         width: 32%;
         display: inline-block;
         text-align: center;
@@ -391,7 +391,7 @@
     position: relative;
     top: -29px;
 
-    @include adaptive("from_768") {
+    @include adaptive("tablet_up") {
         position: relative;
     }
 
