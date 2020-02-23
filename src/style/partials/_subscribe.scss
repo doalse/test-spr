@@ -1,0 +1,91 @@
+.subscribe {
+    padding: 18px 0;
+    background: #f5f5f5;
+
+    @include adaptive("from_768") {
+        padding: 33px 0;
+    }
+}
+
+.subscribe__form-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe__form {
+    width: 100%;
+
+    @include adaptive("from_768") {
+        width: 70%;
+    }
+}
+
+.subscribe__form-title {
+    color: $main-title-color;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include adaptive("from_768") {
+        display: inline-block;
+        font-size: 25px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    @include adaptive("desktop") {
+        font-size: 31px;
+    }
+}
+
+.subscribe__form-text {
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    color: $main-title-color;
+    display: none;
+
+    @include adaptive("from_768") {
+        display: block;
+    }
+}
+
+.subscribe__torm-row {
+    align-items: center;
+    display: block;
+
+
+    @include adaptive("from_768") {
+        display: flex;
+    }
+}
+
+.subscribe__form-input {
+    width: 60%;
+    height: 41px;
+    border-radius: 6px;
+    box-shadow: none;
+    border: 1px solid #cccccc;
+    margin-left: 10px;
+    padding-left: 12px;
+
+
+    @include adaptive("from_768") {
+        width: 270px;
+    }
+}
+
+.subscribe__form-submit {
+    height: 41px;
+    margin-left: 8px;
+    width: 30%;
+
+    @include adaptive("from_768") {
+        width: auto;
+    }
+}
+
+.subscribe__form-text-more {
+    text-transform: uppercase;
+    color: $main-color;
+}

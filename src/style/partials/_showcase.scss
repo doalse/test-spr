@@ -1,0 +1,260 @@
+.showcase {
+    padding: 10px 0 0 0;
+
+    @include adaptive("tablet") {
+        padding: 10px 0 0 0;
+    }
+
+    @include adaptive("from_1025") {
+        padding: 55px 0 0 0;
+    }
+}
+
+.showcase__title {
+    text-align: center;
+    position: relative;
+    background-color: #ededed;
+    padding: 14px 0;
+    margin: 0;
+
+    @include adaptive("tablet") {
+        padding: 14px 0;
+    }
+
+    @include adaptive("from_1025") {
+        padding: 34px 0;
+    }
+}
+
+.showcase__title-main {
+    font-size: 20px;
+    font-weight: 700;
+    color: $main-title-color;
+    text-transform: uppercase;
+    display: block;
+}
+
+.showcase__title-secondary {
+    font-size: 12px;
+    color: $main-font-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+
+    &::after {
+        content: "❯";
+        font-size: 11px;
+        position: relative;
+        top: -2px;
+        left: 2px;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include adaptive("from_768") {
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 6px);
+    }
+}
+
+.showcase__row {
+    border: 1px solid #cccccc;
+    
+    @include adaptive("from_768") {
+        display: flex;
+    }
+}
+
+.showcase__col {
+    position: relative;
+
+    @include adaptive("from_768") {
+        width: 50%;
+    }
+}
+
+.showcase__col-top {
+    padding: 16px 16px 25px 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+
+    @include adaptive("from_768") {
+        padding: 25px 40px 20px 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        border: 30px solid transparent;
+        border-right: 30px solid #fff;
+        display: none;
+        
+        @include adaptive("from_1025") {
+            display: block;
+        }
+    }
+}
+
+.showcase__col-top-text {
+    margin: 0;
+}
+
+.showcase__col-top-title {
+    color: $main-title-color;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 0 20px 0;
+
+    @include adaptive("tablet") {
+        font-size: 17px;
+        padding: 0;
+    }
+
+    @include adaptive("notebook") {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    @include adaptive("desktop") {
+        font-size: 27px;
+        padding: 0;
+    }
+}
+
+.showcase__col-top-subtitle {
+    display: none;
+    padding: 0;
+    margin: 0;
+
+    @include adaptive("from_768") {
+        color: #4e4e4e;
+        font-size: 14px;
+        display: block;
+    }
+
+    @include adaptive("desktop") {
+        color: #4e4e4e;
+        font-size: 15px;
+        display: block;
+    }
+}
+
+.showcase__col-top-btn {
+    min-width: 144px;
+
+    @include adaptive("from_768") {
+        margin-left: 15px;
+    }
+}
+
+.showcase__col-bottom-img {
+    width: 100%;
+    height: auto;
+}
+
+.showcase__col-items {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.showcase__col-item {
+    width: 50%;
+
+    @include adaptive("from_768") {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.showcase__col-image-wrapper {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    @include adaptive("tablet") {
+        padding: 0;
+        height: 70%;
+    }
+    
+    @include adaptive("notebook") {
+        padding: 0;
+    }
+    
+    @include adaptive("desktop") {
+        padding: 0;
+        height: 80%;
+    }
+}
+
+.showcase__col-image {
+    transform: scale(0.8);
+
+    @include adaptive("desktop") {
+        transform: scale(1);
+    }
+}
+
+.showcase__col-title-wrap {
+    height: 30%;
+    text-align: center;
+
+    @include adaptive("tablet") {
+        padding: 0 30px;
+        height: 30%;
+    }
+    
+    @include adaptive("notebook") {
+        padding: 0 30px;
+    }
+    
+    @include adaptive("desktop") {
+        padding: 0 30px;
+        height: 20%;
+    }
+}
+
+.showcase__col-item-title {
+    font-size: 16px;
+    color: $main-title-color;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+    
+    @include adaptive("desktop") {
+        font-size: 18px;
+    }
+}
+
+.showcase__col-item-price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.showcase__col-item-price_old {
+    text-decoration: line-through;
+}
+
+.showcase__col-item-discount {
+    font-size: 16px;
+    color: $main-danger-color;
+    font-weight: 700;
+}

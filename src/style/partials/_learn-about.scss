@@ -1,0 +1,48 @@
+.learn-about {
+    text-align: center;
+    padding: 30px 0;
+    
+    @include adaptive("from_1025") {
+        padding: 100px 0;
+    }
+}
+
+.learn-about__undertitle {
+    font-size: 14px;
+    color: $main-title-color;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+
+    @include adaptive("from_1025") {
+        font-size: 18px;
+    }
+}
+
+.learn-about__title {
+    font-size: 20px;
+    color: $main-color;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+
+    @include adaptive("from_1025") {
+        font-size: 37px;
+    }
+}
+
+.learn-about__btn {
+    padding: 9px 20px;
+}
+
+.learn-about__btn_mobile {
+    @include adaptive("from_768") {
+        display: none;
+    }
+}
+
+.learn-about__btn_desktop {
+    display: none;
+
+    @include adaptive("from_768") {
+        display: inline-block;
+    }
+}
