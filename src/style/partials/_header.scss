@@ -1,5 +1,9 @@
 // header's styles
 
+html {
+    scroll-behavior: smooth;
+}
+
 .main-btn {
     display: inline-block;
     padding: $main-btn-padding;

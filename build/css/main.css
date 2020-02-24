@@ -19,6 +19,9 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif; }
 
+html {
+  scroll-behavior: smooth; }
+
 .main-btn {
   display: inline-block;
   padding: 8px 10px;
@@ -1285,3 +1288,14 @@ body {
   @media only screen and (min-width: 1025px) {
     .footer__mobile-none {
       display: inline-block; } }
+
+.footer__col {
+  position: relative; }
+
+.back-to-top {
+  position: absolute;
+  right: 0;
+  top: 4px; }
+  @media only screen and (min-width: 1025px) {
+    .back-to-top {
+      display: none; } }
